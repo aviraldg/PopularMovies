@@ -50,6 +50,6 @@ public class Movie {
     }
 
     public Uri buildPosterUri() {
-        return Uri.parse("http://image.tmdb.org/t/p/w185/" + this.posterPath);
+        return Uri.parse("http://image.tmdb.org/t/p/w500" + this.posterPath);
     }
 }

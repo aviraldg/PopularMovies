@@ -7,6 +7,6 @@ import retrofit2.http.Query;
 import static android.R.attr.apiKey;
 
 public interface TheMovieDbService {
-    @GET("/movie/popular")
+    @GET("movie/popular")
     Call<ApiResult<Movie>> queryMoviePopular(@Query("api_key") String apiKey);
 }

@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout">
 
     <ImageView
-        android:src="@android:color/background_dark"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:id="@+id/movie_poster_image_view"
         android:contentDescription="@string/movie_poster" />
+
+    <TextView
+        android:visibility="gone"
+        tools:text="Movie Name"
+        android:background="@drawable/movie_item_name"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/movie_name" />
 </RelativeLayout>

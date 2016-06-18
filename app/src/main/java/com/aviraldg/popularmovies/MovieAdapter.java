@@ -1,10 +1,13 @@
 package com.aviraldg.popularmovies;
 
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.aviraldg.popularmovies.api.Movie;
 import com.squareup.picasso.Picasso;
@@ -19,6 +22,9 @@ class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
         @BindView(R.id.movie_poster_image_view)
         ImageView posterImageView;
 
+        @BindView(R.id.movie_name)
+        TextView movieName;
+
         ViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -26,7 +32,10 @@ class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
         void setMovie(Movie movie) {
             Picasso.with(itemView.getContext())
-                    .load(movie.buildPosterUri());
+                    .load(movie.buildPosterUri())
+                    .into(posterImageView);
+
+            movieName.setText(movie.getTitle());
         }
     }
 
