@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Popular Movies</string>
     <string name="movie_poster">Movie Poster</string>
+    <string name="sort_by_rating">Sort by Rating</string>
+    <string name="sort_by_popularity">Sort by Popularity</string>
+    <string name="sort">Sort</string>
 </resources>

@@ -2,11 +2,15 @@ package com.aviraldg.popularmovies.api;
 
 import android.net.Uri;
 
-public class Movie {
+import java.io.Serializable;
+import java.util.Comparator;
+
+public class Movie implements Serializable {
     private long id;
     private String posterPath;
     private String overview;
     private String title;
+    private String releaseDate;
     private float voteAverage;
 
     public long getId() {
@@ -47,6 +51,14 @@ public class Movie {
 
     public void setVoteAverage(float voteAverage) {
         this.voteAverage = voteAverage;
+    }
+
+    public String getReleaseDate() {
+        return releaseDate;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate = releaseDate;
     }
 
     public Uri buildPosterUri() {

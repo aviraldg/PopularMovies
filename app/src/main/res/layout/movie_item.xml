@@ -6,11 +6,13 @@
     android:id="@+id/constraintLayout">
 
     <ImageView
+        android:transitionName="movie_poster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:id="@+id/movie_poster_image_view"
-        android:contentDescription="@string/movie_poster" />
+        android:contentDescription="@string/movie_poster"
+        tools:targetApi="lollipop" />
 
     <TextView
         android:visibility="gone"

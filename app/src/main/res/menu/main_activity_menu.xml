@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="@string/sort" android:icon="@drawable/ic_sort_black_24dp" app:showAsAction="ifRoom">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:id="@+id/item_sort_by_rating"
+                    android:checked="true"
+                    android:title="@string/sort_by_rating" />
+                <item android:id="@+id/item_sort_by_popularity"
+                    android:title="@string/sort_by_popularity" />
+            </group>
+        </menu>
+    </item>
+</menu>
