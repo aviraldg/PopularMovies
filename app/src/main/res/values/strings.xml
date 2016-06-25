@@ -4,4 +4,7 @@
     <string name="sort_by_rating">Sort by Rating</string>
     <string name="sort_by_popularity">Sort by Popularity</string>
     <string name="sort">Sort</string>
+    <string name="favourites">Favourites</string>
+    <string name="add_to_favourites">Add to Favourites</string>
+    <string name="remove_from_favourites">Remove from Favourites</string>
 </resources>

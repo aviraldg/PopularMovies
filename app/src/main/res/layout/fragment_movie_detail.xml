@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.aviraldg.popularmovies.MovieDetailFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/detail_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="4dp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                tools:targetApi="lollipop" />
+
+            <ImageView
+                android:id="@+id/movie_poster_image_view"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/detail_toolbar"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/movie_poster"
+                android:scaleType="centerInside"
+                tools:targetApi="lollipop" />
+
+            <TextView
+                android:id="@+id/movie_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_toolbar"
+                android:layout_margin="8dp"
+                android:layout_toEndOf="@+id/movie_poster_image_view"
+                android:layout_toRightOf="@+id/movie_poster_image_view"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="0/10" />
+
+            <TextView
+                android:id="@+id/movie_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/detail_toolbar"
+                android:layout_margin="8dp"
+                android:layout_toEndOf="@+id/movie_rating"
+                android:layout_toRightOf="@+id/movie_rating"
+                android:gravity="end"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="2016" />
+
+            <TextView
+                android:id="@+id/movie_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/movie_rating"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toEndOf="@+id/movie_poster_image_view"
+                android:layout_toRightOf="@+id/movie_poster_image_view"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                tools:text="Movie Overview" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/trailers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/reviews_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
